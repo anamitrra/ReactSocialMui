@@ -1,28 +1,42 @@
-import { AccountBox, Groups, Home, ModeNight, Person, Person3, Settings, Storefront } from '@mui/icons-material'
-import { List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
-import { Box } from '@mui/system'
-import React from 'react'
+import {
+  AccountBox,
+  Groups,
+  Home,
+  ModeNight,
+  Person,
+  Person3,
+  Settings,
+  Storefront,
+} from "@mui/icons-material";
+import {
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Switch,
+} from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
 
 function Sidebar() {
   return (
-   <Box flex={1} 
-         p={2} 
-         sx={{display:{xs:'none', sm:"block"}}}>
-    
-    <List>
+    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+      <Box position="fixed">
+        <List>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Home/>
+                <Home />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
-          
+
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <Settings/>
+                <Settings />
               </ListItemIcon>
               <ListItemText primary="Settings" />
             </ListItemButton>
@@ -31,17 +45,16 @@ function Sidebar() {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <AccountBox/>
+                <AccountBox />
               </ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItemButton>
           </ListItem>
-        </List>
 
-        <ListItem disablePadding>
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <Person/>
+                <Person />
               </ListItemIcon>
               <ListItemText primary="Friends" />
             </ListItemButton>
@@ -50,7 +63,7 @@ function Sidebar() {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <Storefront/>
+                <Storefront />
               </ListItemIcon>
               <ListItemText primary="Marketplace" />
             </ListItemButton>
@@ -59,7 +72,7 @@ function Sidebar() {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <Groups/>
+                <Groups />
               </ListItemIcon>
               <ListItemText primary="Groups" />
             </ListItemButton>
@@ -68,14 +81,15 @@ function Sidebar() {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-              <ModeNight/>
+                <ModeNight />
               </ListItemIcon>
-              <Switch/>
+              <Switch />
             </ListItemButton>
           </ListItem>
-
-        </Box>
-  )
+        </List>
+      </Box>
+    </Box>
+  );
 }
 
-export default Sidebar
+export default Sidebar;

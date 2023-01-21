@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Avatar, Badge, Box, Button, InputBase, Menu, MenuItem, styled, Toolbar, Typography } from "@mui/material";
+import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, styled, Toolbar, Typography } from "@mui/material";
 import { Mail, Notifications, Pets } from "@mui/icons-material";
 
 const StyledToolbar = styled(Toolbar)({
@@ -22,9 +22,9 @@ const Icons = styled(Box)(({theme})=>({
 function Navbar() {
     const [open, setopen] = useState(false)
   return (
-    <AppBar position="stick">
+    <AppBar position="fixed">
         <StyledToolbar>
-        <Typography varient= "h6" sx={{display:{xs:"none", sm:"block"}}}> FakeBook </Typography>
+        <Typography variant= "h6" sx={{display:{xs:"none", sm:"block"}}}> FakeBook </Typography>
         <Pets sx={{display:{xs:"block", sm:"none"}}}/>
         <Search><InputBase placeholder='Search ....'/></Search>
         <Icons>
