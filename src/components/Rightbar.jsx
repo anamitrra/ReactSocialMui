@@ -1,8 +1,12 @@
 import React from 'react'
+import { Box } from '@mui/system'
 
 function Rightbar() {
   return (
-    <div>Rightbar</div>
+    <Box flex={2} padding={2} sx={{
+        display:{xs:'none',
+        sm:"block"}
+       }}>Rightbar</Box>
   )
 }
 

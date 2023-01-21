@@ -1,8 +1,9 @@
+import { Box } from '@mui/system'
 import React from 'react'
 
 function Feed() {
   return (
-    <div>Feed</div>
+    <Box flex={4} padding={2}>Feed</Box>
   )
 }
 
