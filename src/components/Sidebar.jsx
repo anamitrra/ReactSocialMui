@@ -20,7 +20,7 @@ import React from "react";
 
 
 
-function Sidebar() {
+function Sidebar({colorMode, setcolorMode}) {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
@@ -84,7 +84,7 @@ function Sidebar() {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch />
+              <Switch onChange={(e)=>setcolorMode(colorMode==="light"?"dark":"light")}/>
             </ListItemButton>
           </ListItem>
         </List>

@@ -1,5 +1,6 @@
-import { Box, styled } from "@mui/material";
+import { Box, createTheme, ThemeProvider } from "@mui/material";
 import { Stack } from "@mui/system";
+import { useState } from "react";
 import Feed from "./components/Feed";
 import Navbar from "./components/Navbar";
 import Rightbar from "./components/Rightbar";
@@ -7,27 +8,29 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
 
+  const [colorMode, setcolorMode] = useState("light")
 
-  const MobileFeed = styled(Box)(({theme})=>({
-    display:"flex",
-    [theme.breakpoints.up("sm")]:{
-      display:"none",
+  const darkTheme = createTheme({
+    palette:{
+      mode:colorMode
     }
-  }));
+  })
   
   return (
-    <>
+    <ThemeProvider theme={darkTheme} >
+    <Box bgcolor={"background.default"} color={"text.primary"}>
     <Navbar />
-    <MobileFeed>
-    <Feed />
-    </MobileFeed>
-      <Stack direction="row" spacing={2} justifyContent="space-between">
-        <Sidebar />
+      <Stack direction="row" justifyContent="space-between">
+        <Sidebar setcolorMode={setcolorMode} colorMode={colorMode} />
         <Feed />
         <Rightbar />
       </Stack>
+    </Box>
+    </ThemeProvider>
+ 
+    
       
-    </>
+ 
   );
 }
 
