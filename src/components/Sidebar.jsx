@@ -4,7 +4,6 @@ import {
   Home,
   ModeNight,
   Person,
-  Person3,
   Settings,
   Storefront,
 } from "@mui/icons-material";
@@ -18,6 +17,8 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+
+
 
 function Sidebar() {
   return (

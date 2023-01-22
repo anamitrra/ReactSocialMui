@@ -4,12 +4,15 @@ import { Mail, Notifications, Pets } from "@mui/icons-material";
 
 const StyledToolbar = styled(Toolbar)({
     display:"flex",
-    justifyContent:"space-between"
+    justifyContent:"space-between",
+    backgroundColor:"#6a1b9a",
 });
 
 const Search = styled("div")(({theme})=>({
     backgroundColor:"white",
-    width:"40%",
+      padding: "0 10px",
+  borderRadius: theme.shape.borderRadius,
+    width:"30%",
 }))
 
 const Icons = styled(Box)(({theme})=>({
@@ -22,11 +25,11 @@ const Icons = styled(Box)(({theme})=>({
 function Navbar() {
     const [open, setopen] = useState(false)
   return (
-    <AppBar position="fixed">
+    <AppBar position="sticky">
         <StyledToolbar>
         <Typography variant= "h6" sx={{display:{xs:"none", sm:"block"}}}> FakeBook </Typography>
         <Pets sx={{display:{xs:"block", sm:"none"}}}/>
-        <Search><InputBase placeholder='Search ....'/></Search>
+        <Search><InputBase placeholder=' Search ....'/></Search>
         <Icons>
             <Badge badgeContent={4} color="error"> <Mail/> </Badge>
             <Badge badgeContent={2} color="error"> <Notifications/> </Badge>
