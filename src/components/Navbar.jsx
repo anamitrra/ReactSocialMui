@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, styled, Toolbar, Typography } from "@mui/material";
+import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, styled, Switch, Toolbar, Typography } from "@mui/material";
 import { Mail, Notifications, Pets } from "@mui/icons-material";
 
 const StyledToolbar = styled(Toolbar)({
@@ -22,7 +22,7 @@ const Icons = styled(Box)(({theme})=>({
 }))
 
 
-function Navbar() {
+function Navbar({colorMode, setcolorMode}) {
     const [open, setopen] = useState(false)
   return (
     <AppBar position="sticky">
@@ -55,6 +55,8 @@ function Navbar() {
         <MenuItem onClick={""}>Profile</MenuItem>
         <MenuItem onClick={""}>My account</MenuItem>
         <MenuItem onClick={""}>Logout</MenuItem>
+        <MenuItem onClick={""}><Switch onChange={(e)=>setcolorMode(colorMode==="light"?"dark":"light")}/></MenuItem>
+        
       </Menu>
         </StyledToolbar>
     </AppBar>

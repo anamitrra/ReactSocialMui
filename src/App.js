@@ -9,18 +9,17 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
 
-  const [colorMode, setcolorMode] = useState("light")
-
+  let [colorMode, setcolorMode] = useState("light")
+ 
   const darkTheme = createTheme({
     palette:{
       mode:colorMode
     }
   })
-  
   return (
     <ThemeProvider theme={darkTheme} >
     <Box bgcolor={"background.default"} color={"text.primary"}>
-    <Navbar />
+    <Navbar setcolorMode={setcolorMode} colorMode={colorMode} />
       <Stack direction="row" justifyContent="space-between">
         <Sidebar setcolorMode={setcolorMode} colorMode={colorMode} />
         <Feed />
