@@ -1,6 +1,7 @@
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 import { Stack } from "@mui/system";
 import { useState } from "react";
+import Add from "./components/Add";
 import Feed from "./components/Feed";
 import Navbar from "./components/Navbar";
 import Rightbar from "./components/Rightbar";
@@ -25,6 +26,7 @@ function App() {
         <Feed />
         <Rightbar />
       </Stack>
+      <Add/>
     </Box>
     </ThemeProvider>
  
