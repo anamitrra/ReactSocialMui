@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { Box } from "@mui/system";
 import React from "react";
 import Post from "./Post";

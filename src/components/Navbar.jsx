@@ -5,7 +5,7 @@ import { Mail, Notifications, Pets } from "@mui/icons-material";
 const StyledToolbar = styled(Toolbar)({
     display:"flex",
     justifyContent:"space-between",
-    backgroundColor:"#6a1b9a",
+    backgroundColor:"#6b189e",
 });
 
 const Search = styled("div")(({theme})=>({
@@ -52,10 +52,10 @@ function Navbar({colorMode, setcolorMode}) {
           horizontal: 'right',
         }}
       >
-        <MenuItem onClick={""}>Profile</MenuItem>
-        <MenuItem onClick={""}>My account</MenuItem>
-        <MenuItem onClick={""}>Logout</MenuItem>
-        <MenuItem onClick={""}><Switch onChange={(e)=>setcolorMode(colorMode==="light"?"dark":"light")}/></MenuItem>
+        <MenuItem onClick={"#"}>Profile</MenuItem>
+        <MenuItem onClick={"#"}>My account</MenuItem>
+        <MenuItem onClick={"#"}>Logout</MenuItem>
+        <MenuItem onClick={"#"}><Switch onChange={(e)=>setcolorMode(colorMode==="light"?"dark":"light")}/></MenuItem>
         
       </Menu>
         </StyledToolbar>
